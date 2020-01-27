@@ -1,5 +1,5 @@
 
-- name: run task on django
+- name: Elk setup
   hosts: elkserver
   user: root
   tasks:
@@ -7,3 +7,5 @@
       copy:
         src: /var/lib/jenkins/workspace/elk-setup
         dest: $HOME/elk
+    - name: bringing up the application
+      command: chdir=/root/elk/elk-setup docker-compose up -d
