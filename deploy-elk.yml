@@ -8,4 +8,4 @@
         src: /var/lib/jenkins/workspace/elk-setup
         dest: $HOME/elk
     - name: bringing up the application
-      command: chdir=/root/elk/elk-setup docker-compose up -d
+      command: chdir=/home/ubuntu/elk/docker docker-compose up -d
